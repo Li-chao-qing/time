@@ -1,0 +1,107 @@
+*[class='a0'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 130px;
+  top: 0px;
+  border-radius: 50%;
+}
+*[class='a1'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 112.58330249px;
+  top: 65px;
+  border-radius: 50%;
+}
+*[class='a2'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 65px;
+  top: 112.58330249px;
+  border-radius: 50%;
+}
+*[class='a3'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0px;
+  top: 130px;
+  border-radius: 50%;
+}
+*[class='a4'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -65px;
+  top: 112.58330249px;
+  border-radius: 50%;
+}
+*[class='a5'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -112.58330249px;
+  top: 65px;
+  border-radius: 50%;
+}
+*[class='a6'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -130px;
+  top: 0px;
+  border-radius: 50%;
+}
+*[class='a7'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -112.58330249px;
+  top: -65px;
+  border-radius: 50%;
+}
+*[class='a8'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -65px;
+  top: -112.58330249px;
+  border-radius: 50%;
+}
+*[class='a9'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0px;
+  top: -130px;
+  border-radius: 50%;
+}
+*[class='a10'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 65px;
+  top: -112.58330249px;
+  border-radius: 50%;
+}
+*[class='a11'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 112.58330249px;
+  top: -65px;
+  border-radius: 50%;
+}
+*[class='a12'] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 130px;
+  top: 0px;
+  border-radius: 50%;
+}
+*[data=a] {
+  animation: round 2s linear infinite;
+}

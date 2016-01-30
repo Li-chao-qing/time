@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="less.css">
+<style>
+body{
+	background: url(1.png) no-repeat center -65px;
+	background:auto 1000px;
+}
+    .clock{
+        width: 300px;
+        height:300px;
+        
+        background: url(dl1.png) no-repeat 0 2px;
+        background-size:auto 300px;
+        border-radius: 50%;
+        position: fixed;
+        font-weight:bold ;
+        left: 0;right:0;top:0;bottom: 0;margin: 50px auto;
+    }
+    .dian,.dd{
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #404040;
+        position: absolute;
+        left: 141px;
+        top:141px;
+        z-index: 0;
+    }
+    .dd{
+        left: 143px;
+        top:143px;
+        width: 14px;
+        background: #FF5A5A;
+        height: 14px;
+        z-index: 1;
+    }
+    .xx{
+    	font-size: 20px;
+        position: absolute;
+        left: 140px;
+        top: 140px;
+    }
+    .info{
+        position: absolute;
+        left: 88px;top:203px;
+    }
+  /*  .zi{
+    	width: 300px;
+    	height: 200px;
+    	background: url(ss.png) no-repeat center;
+    	background-size:300px auto ;
+    	position: absolute;
+    	left: 0;
+    
+    	top: 350px;
+    }*/
+</style>
+<script>
+    window.onload=function(){
+//document.addEventListener('DOMContentLoaded',function(){
+//	document.addEventListener('plusready',function(){
+		 var clock=document.getElementsByClassName('clock')[0];
+        createMark();
+        console.log(clock)
+        function createMark(){
+
+            for(var i=0;i<60;i++){
+                var div=document.createElement('div');
+                var w, h, l,r;
+                if(i%5==0){
+
+                    r=4;
+                    w=8;
+                    h=8;
+                }else{
+                    r=6;
+                    w=4;
+                    h=4;
+                }
+                l=(300-w)/2;
+
+                div.style.cssText='border-radius:50%;line-height:50px;width:'+w+'px;height:'+h+'px;background:#fff;position:absolute;left:0;top:0px;-webkit-transform:translate('+l+'px,'+(-10+r-5)+'px) rotate('+i*6+'deg);-webkit-transform-origin:center '+(160-r+5)+'px;';
+                clock.appendChild(div);
+
+            }
+        }
+        //指针
+        var time=new Date();
+        var h=time.getHours();
+        var m=time.getMinutes();
+        var s=time.getSeconds();
+        var hp=createPointer(170,40,'s.png',h*30-90+m*6/12);
+        var mp=createPointer(210,40,'f.png',6*m-90);
+        var sp=createPointer(220,40,'m.png',6*s-90);
+        setInterval(function(){
+            var time=new Date();
+            var h=time.getHours();
+            var m=time.getMinutes();
+            var s=time.getSeconds();
+            hp.style.backgroundSize='auto 20px';
+            mp.style.backgroundSize='130px auto';
+            sp.style.backgroundSize=' auto 15px';
+            hp.style.webkitTransform='translate(150px,'+hp.t+'px) rotate('+(h*30-90+6*m/12)+'deg)';
+            mp.style.webkitTransform='translate(150px,'+mp.t+'px) rotate('+(6*m-90)+'deg)';
+            sp.style.webkitTransform='translate(150px,'+sp.t+'px) rotate('+(6*s-90)+'deg)';
+
+        },0);
+        function createPointer(w,h,c,r){
+           var div=document.createElement('div');
+            var t=(300-h)/2;
+            div.t=t;
+            div.style.cssText='width:'+w+'px;height:'+h+'px;background:url('+c+') no-repeat -10px center;position:absolute;left:0;top:0;-webkit-transform:translate(100px,'+t+'px) rotate('+r+'deg);-webkit-transform-origin:left center';
+            clock.appendChild(div);
+            return div;
+        }
+//	},false);
+
+	
+	
+//},false);
+
+       
+    };
+</script>
+<body>
+    <div class="clock">
+        <div class="dian"></div>
+        <div class="dd"></div>
+        <div class="info">have a nice day</div>
+        <div class="zi"></div>
+        <div class="xx">
+            <div class="a0">3</div>
+            <div class="a1">4</div>
+            <div class="a2">5</div>
+            <div class="a3">6</div>
+            <div class="a4">7</div>
+            <div class="a5">8</div>
+            <div class="a6">9</div>
+            <div class="a7">10</div>
+            <div class="a8">11</div>
+            <div class="a9">12</div>
+            <div class="a10">1</div>
+            <div class="a11">2</div>
+        </div>
+       
+    </div>
+</body>
+</html>
